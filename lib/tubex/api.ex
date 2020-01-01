@@ -4,8 +4,10 @@ defmodule Tubex.API do
     HTTPoison.start
     query = Plug.Conn.Query.encode(query)
 
-    unless String.length(query) == 0 do
-      url = "#{url}?#{query}"
+    url = if String.length(query) > 0 do
+      "#{url}?#{query}"
+    else
+      url
     end
 
     HTTPoison.get!(url, [])
