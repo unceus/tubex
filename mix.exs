@@ -40,7 +40,7 @@ defmodule Tubex.Mixfile do
   defp deps do
     [
       {:poison, "~> 3.0"},
-      {:httpoison, "~> 0.11.1"},
+      {:httpoison, "~> 1.6"},
       {:ex_doc, "~> 0.8.0", only: :dev},
       {:earmark, ">= 0.0.0", only: :dev}
     ]
