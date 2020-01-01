@@ -2,7 +2,7 @@ defmodule Tubex.API do
 
   def get(url, query \\ []) do
     HTTPoison.start
-    query = Tubex.Utils.encode_body(query)
+    query = Plug.Conn.Query.encode(query)
 
     unless String.length(query) == 0 do
       url = "#{url}?#{query}"
