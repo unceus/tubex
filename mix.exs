@@ -39,8 +39,8 @@ defmodule Tubex.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:poison, "~> 2.0"},
-      {:httpoison, "~> 0.8.0"},
+      {:poison, "~> 1.5 or ~> 2.0 or ~> 3.0"},
+      {:httpoison, "~> 0.9 or ~> 1.2 or ~> 1.6"},
       {:plug, "~> 1.8.3"},
       {:ex_doc, "~> 0.8.0", only: :dev},
       {:earmark, ">= 0.0.0", only: :dev}
